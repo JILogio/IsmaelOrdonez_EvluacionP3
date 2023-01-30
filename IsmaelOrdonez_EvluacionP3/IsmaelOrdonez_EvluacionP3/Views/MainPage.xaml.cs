@@ -14,6 +14,6 @@ public partial class MainPage : ContentPage
 
     public async void _index(object sender, EventArgs e)
     {
-
+        await Shell.Current.GoToAsync("index");
     }
 }
