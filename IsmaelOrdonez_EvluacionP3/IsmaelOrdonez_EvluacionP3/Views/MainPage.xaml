@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IsmaelOrdonez_EvluacionP3.Views.MainPage"
+             Title="MainPage">
+    <VerticalStackLayout>
+        <Label Text="Pagina de busqueda de imagenes personajes de anime"/>
+
+        <HorizontalStackLayout>
+            <Button Text="Buscar Imagenes" Clicked="_buscar" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Visualizar data" Clicked="_index" HorizontalOptions="FillAndExpand"/>
+        </HorizontalStackLayout>
+        
+    </VerticalStackLayout>
+</ContentPage>

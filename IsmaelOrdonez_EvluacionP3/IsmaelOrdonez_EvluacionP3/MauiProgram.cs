@@ -1,4 +1,6 @@
-﻿namespace IsmaelOrdonez_EvluacionP3;
+﻿using IsmaelOrdonez_EvluacionP3.Data;
+
+namespace IsmaelOrdonez_EvluacionP3;
 
 public static class MauiProgram
 {
@@ -13,6 +15,9 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-		return builder.Build();
+        string dbPath = FileAccessHelper.GetLocalFilePath("api.db3");
+        builder.Services.AddSingleton<ApiBDD>(s => ActivatorUtilities.CreateInstance<ApiBDD>(s, dbPath));
+
+        return builder.Build();
 	}
 }
