@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IsmaelOrdonez_EvluacionP3.Views.SearchItemPage"
+             Title="SearchItemPage">
+    <VerticalStackLayout Padding="20" Spacing="10">
+        <Label Text="Nombre" HorizontalOptions="Start"/>
+        <SearchBar x:Name="searchName" HorizontalOptions="FillAndExpand"/>
+
+        <Label Text="Cantidad de resultados" HorizontalOptions="Start"/>
+        <Entry x:Name="quant" HorizontalOptions="FillAndExpand"/>
+
+        <Grid ColumnDefinitions="*,*" RowDefinitions="*">
+            <Button Text="Mostrar" Clicked="mostrarIm" Grid.Column="0" Grid.Row="0" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Siguiente" Clicked="_siguiente" Grid.Column="1" Grid.Row="0" HorizontalOptions="FillAndExpand"/>
+
+        </Grid>
+
+        <Image
+                x:Name="image"
+                HeightRequest="500"
+                HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>
